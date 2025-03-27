@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Talents</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body   onload="displayGreeting()">
+    <button class="dark-mode-btn" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+    <header>
+        <h1>My Skills & Talents</h1>
+        <h2 id="greeting"></h2>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="childhood.html">Childhood</a>
+        <a href="education.html">Education</a>
+        <a href="skills.html">Skills & Talents</a>
+        <a href="future.html">Future Aspirations</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <h2>My Skills & Talents</h2>
+        <p>
+            I believe in continuous learning and personal growth. Over the years, I have developed a variety of skills
+            that reflect both my passions and strengths.
+        </p>
+        <h3>Creative Skills</h3>
+        <p>
+            I enjoy painting, photography and music. It allows me to express my creativity in unique ways.
+        </p>
+        <h3> Technical Skills</h3>
+        <p>
+            I have some experience with coding. I love problem-solving and working on innovative projects.
+        </p>
+
+        <h3>Click the button to learn something fun about me!</h3>
+<button onclick="showRandomFact()">Show Fun Fact</button>
+<p id="funFact"></p>
+
+<script>
+    function showRandomFact() {
+        let facts = [
+            "I once tried to jump over  a fence but fell on my head. ",
+            "I can't solve a Rubik’s Cube in under 2 minutes!😂😂",
+            "I love almost all types of music. 🎵",
+            "My dream travel destination is Japan! 🗾",
+            "I love comic books. "
+        ];
+        let randomIndex = Math.floor(Math.random() * facts.length);
+        document.getElementById("funFact").innerText = facts[randomIndex];
+    }
+</script>
+
+    </div>
+    <footer>
+        &copy; 2025 My Journey
+    </footer>
+</body>
+</html>

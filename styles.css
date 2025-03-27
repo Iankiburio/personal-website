@@ -1,0 +1,161 @@
+/* === Global Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === Layout Styling === */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Arial", sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.8;
+}
+
+/* === Header === */
+header {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 30px 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Greeting Text */
+#greeting {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-top: 8px;
+}
+
+/* === Navigation Bar === */
+nav {
+    text-align: center;
+    background-color: #333;
+    padding: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #FFD700; /* Gold highlight on hover */
+}
+
+/* === Main Content === */
+.container {
+    flex: 1; /* Pushes the footer down */
+    width: 75%;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Spacing for headings */
+.container h2, .container h3 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #222;
+}
+
+.container p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.container ul, 
+.container ol {
+    margin-bottom: 25px;
+    padding-left: 25px;
+}
+
+.container ul li,
+.container ol li {
+    margin-bottom: 10px;
+    color: inherit; /* Ensure lists inherit the text color */
+}
+
+/* === Footer (Fixed at Bottom) === */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #222;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+    font-size: 0.9rem;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* === Dark Mode Styles === */
+.dark-mode {
+    background-color: #111;
+    color: #ddd;
+}
+
+/* Ensure all text, including list items, matches paragraph color */
+.dark-mode .container {
+    background: #222;
+    color: #ddd; /* Ensures uniform text color */
+}
+
+/* Fix list text color in dark mode */
+.dark-mode ul, 
+.dark-mode ol, 
+.dark-mode li {
+    color: inherit !important; /* Ensures lists match container text */
+    font-weight: normal !important; /* Prevent unwanted bolding */
+}
+
+/* === Dark Mode Toggle Button === */
+.dark-mode-btn {
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    padding: 8px 15px;
+    background-color: #444;
+    color: hsl(0, 0%, 100%);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+}
+
+.dark-mode-btn:hover {
+    background-color: #666;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .dark-mode-btn {
+        top: 10px;
+        right: 15px;
+    }
+}
